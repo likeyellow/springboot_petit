@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+  <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+    	<!-- <pattern>%d{yyyyMMdd HH:mm:ss.SSS} [%thread] %-3level %logger{5} - %msg %n</pattern> -->
+    	<pattern>%d{yyyyMMdd HH:mm:ss.SSS} - %msg %n</pattern>
+    </encoder>
+  </appender>
+  
+
+  <logger name="jdbc.sqlonly" level="info"/>
+  <logger name="jdbc.sqltiming" level="INFO"/>
+  <logger name="jdbc.audit" level="OFF"/>
+  <logger name="jdbc.resultset" level="OFF"/>
+  <logger name="jdbc.resultsettable" level="INFO"/>
+  <logger name="jdbc.connection" level="OFF"/>
+  
+  <root level="info">
+    <appender-ref ref="console" />
+  </root>
+  
+</configuration> 
+
+<!--  
+<configuration debug="true">
+  <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d %5p [%c] %m%n</pattern>
+    </encoder>
+  </appender>
+  
+
+  <appender name="console-infolog" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d %5p %m%n</pattern>
+    </encoder>
+  </appender>
+  
+ 
+ <logger level="debug" appender-ref="console"/> 
+  
+ 
+  <root level="info">
+    <appender-ref ref="console" />
+  </root>
+  
+</configuration>
+
+-->
